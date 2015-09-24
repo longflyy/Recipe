@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Recipe</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_others">其他</string>
+    <string-array name="food_names">
+        <item>乜鳩離</item>
+        <item>諗唔到叫咩名</item>
+        <item>好似幾撚好食</item>
+        <item>想食呀!</item>
+        <item>唔好搞鳩我啦</item>
+        <item>肥死人咩</item>
+    </string-array>
+    <string-array name="food_makers">
+        <item>莫大狀</item>
+        <item>艾未未</item>
+        <item>志雲飯局</item>
+        <item>美女廚房</item>
+        <item>呀蘇廚房</item>
+        <item>何大明</item>
+    </string-array>
+</resources>
