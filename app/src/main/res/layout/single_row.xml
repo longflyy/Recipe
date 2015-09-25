@@ -6,41 +6,46 @@
 
 
             <ImageView
-                android:layout_width="130dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
                 android:layout_alignParentLeft="true"
                 android:id="@+id/food_pics"
-                android:src="@drawable/food_1"/>
+                android:src="@drawable/food_1" />
 
-            <TextView
-                android:id="@+id/food_name"
-                android:textColor="#FFFFFF"
-                android:gravity="center"
-                android:textSize="20dp"
-                android:layout_width="125dp"
-                android:layout_height="100dp"
-                android:layout_toRightOf="@+id/food_pics"
-                android:text="What"/>
+                <LinearLayout
+                    android:id="@+id/infoLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/food_pics">
 
-            <TextView
-                android:id="@+id/food_maker"
-                android:layout_toRightOf="@+id/food_name"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp"
-                android:layout_alignParentRight="true"
-                android:gravity="center"
-                android:text="Who"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp" />
+                    <TextView
+                        android:id="@+id/food_name"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:text="What" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#FFFFFF"
-                android:layout_below="@+id/food_pics">
+                    <TextView
+                        android:id="@+id/food_maker"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="Who"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp" />
 
-            </View>
+                </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#FFFFFF"
+        android:layout_below="@+id/infoLine">
 
+    </View>
 
 </RelativeLayout>

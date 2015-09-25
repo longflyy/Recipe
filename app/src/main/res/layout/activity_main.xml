@@ -4,47 +4,10 @@
     tools:context=".MainActivity"
     android:background="#000000"
     >
-    <LinearLayout
-        android:id="@+id/titleLine"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="20dp"
-            android:text="外觀"
-            android:textColor="#FFFFFF"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="20dp"
-            android:text="美食名字"
-            android:textColor="#FFFFFF"
-            />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="20dp"
-            android:text="廚師"
-            android:textColor="#FFFFFF"
-            />
-
-    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/titleLine">
+        android:layout_height="wrap_content">
 
             <ListView
                 android:layout_width="match_parent"

@@ -1,9 +1,12 @@
 package example.com.recipe;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,9 +34,22 @@ public class MainActivity extends AppCompatActivity {
             names, food_makers[i]);
             adapter.add(dataProvider);
             i++;
-
         }
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                goToRecipe(view);
+            }
+        });
     }
+
+    public void goToRecipe(View view){
+        Intent intent = new Intent();
+        intent.setClass(this, RecipeActivity.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -48,6 +64,21 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+
+        switch (id){
+            case R.id.others_news:
+                Intent intent = new Intent();
+                intent.setClass(this, NewsActivity.class);
+                startActivity(intent);
+
+                break;
+            case R.id.others_search:
+                Intent intent2 = new Intent();
+                intent2.setClass(this,SearchActivity.class);
+                startActivity(intent2);
+
+                break;
+        }
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_others) {
